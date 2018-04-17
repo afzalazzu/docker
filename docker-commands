@@ -8,3 +8,43 @@
   648  docker rm $(docker ps -aq)
   649  docker rmi $(docker images -q)
   650  history
+  
+  lab-1:
+    docker pull alpine
+    check dokcer images
+  
+     Next 
+   docker run alpine ls -l
+  
+  check another command
+  
+  docker run alpine echo "hello from alpine"
+  
+  Next another command 
+  docker run alpine /bin/sh
+  
+  next run the other command: docker run -it alpine /bin/sh
+  
+  run/pull/stop/rm/rmi
+  
+  lab:-2
+  docker run --name static-site -e AUTHOR="Your Name" -d -P dockersamples/static-site
+  docker port static-site
+  docker-machine ip default
+  
+  another window
+  docker run --name static-site-2 -e AUTHOR="Your Name" -d -p 8888:80 dockersamples/static-site
+  
+  
+  
+Excersie-1:
+  
+FROM scratch
+COPY hello /
+CMD ["/hello"]
+
+touch hello
+run --> docker build .
+
+
+
