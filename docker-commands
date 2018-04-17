@@ -1,0 +1,10 @@
+ 641  docker ps -a
+  642  docker stop 81718fe193ad
+  643  docker stop (docker ps -a)
+  644  docker stop $(docker ps -a)
+  645  docker ps -aq
+  646  docker ps -aq
+  647  docker stop $(docker ps -aq)
+  648  docker rm $(docker ps -aq)
+  649  docker rmi $(docker images -q)
+  650  history
